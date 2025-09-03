@@ -152,7 +152,7 @@ const Index = () => {
       name: 'Sarah Johnson',
       company: 'TechCorp International',
       role: 'Procurement Director',
-      content: 'TAG Groups has been instrumental in streamlining our global supply chain. Their expertise in electronics sourcing and quality assurance has saved us both time and money.',
+      content: 'TAG Group has been instrumental in streamlining our global supply chain. Their expertise in electronics sourcing and quality assurance has saved us both time and money.',
       image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150',
       rating: 5
     },
@@ -160,7 +160,7 @@ const Index = () => {
       name: 'Michael Chen',
       company: 'Global Manufacturing Ltd',
       role: 'Supply Chain Manager',
-      content: 'Outstanding service and reliability. TAG Groups consistently delivers high-quality products on time and within budget. Their market knowledge is exceptional.',
+      content: 'Outstanding service and reliability. TAG Group consistently delivers high-quality products on time and within budget. Their market knowledge is exceptional.',
       image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150',
       rating: 5
     },
@@ -168,7 +168,7 @@ const Index = () => {
       name: 'Emma Rodriguez',
       company: 'Fashion Forward Inc',
       role: 'Head of Sourcing',
-      content: 'The textile sourcing services provided by TAG Groups have been game-changing for our business. Their attention to quality and sustainability aligns perfectly with our values.',
+      content: 'The textile sourcing services provided by TAG Group have been game-changing for our business. Their attention to quality and sustainability aligns perfectly with our values.',
       image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150',
       rating: 5
     }
@@ -334,7 +334,7 @@ const Index = () => {
       <section className="relative bg-gradient-to-r from-blue-800 to-sky-700 text-white py-20">
         <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold mb-6">About TAG Groups</h1>
+          <h1 className="text-5xl font-bold mb-6">About TAG Group</h1>
           <p className="text-xl max-w-3xl mx-auto">
             Building bridges in global commerce through innovation, integrity, and excellence
           </p>
@@ -361,7 +361,7 @@ const Index = () => {
             <div className="relative">
               <img 
                 src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800" 
-                alt="TAG Groups Office" 
+                alt="TAG Group Office"
                 className="rounded-xl shadow-2xl"
               />
               <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground p-6 rounded-xl shadow-lg">
