@@ -361,12 +361,384 @@ const Index = () => {
             <div className="relative">
               <img 
                 src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800" 
-                alt="TAG Group Office"
+                alt="TAG Group Office" 
                 className="rounded-xl shadow-2xl"
               />
               <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground p-6 rounded-xl shadow-lg">
                 <div className="text-3xl font-bold">15+</div>
                 <div className="text-sm">Years of Excellence</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission, Vision, Values */}
+      <section className="py-20 bg-muted">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Award className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-2xl font-bold text-foreground mb-4">Our Mission</h3>
+              <p className="text-muted-foreground">
+                To empower businesses worldwide by providing innovative trading solutions, 
+                exceptional quality products, and unparalleled service that drives sustainable growth 
+                and creates lasting partnerships.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Globe className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-2xl font-bold text-foreground mb-4">Our Vision</h3>
+              <p className="text-muted-foreground">
+                To be the world's most trusted trading partner, recognized for our integrity, 
+                innovation, and commitment to excellence in connecting global markets and 
+                fostering international commerce.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Users className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="text-2xl font-bold text-foreground mb-4">Our Values</h3>
+              <p className="text-muted-foreground">
+                Integrity in every transaction, excellence in service delivery, innovation in 
+                solutions, sustainability in practices, and partnership in relationships that 
+                create mutual success and long-term value.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+
+  const renderServices = () => (
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-r from-blue-800 to-sky-700 text-white py-20">
+        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl font-bold mb-6">Our Services</h1>
+          <p className="text-xl max-w-3xl mx-auto">
+            Comprehensive trading solutions tailored to your business needs
+          </p>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12">
+            {services.map((service, index) => (
+              <div key={index} className="bg-card rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
+                <div className="md:flex">
+                  <div className="md:w-1/3">
+                    <img src={service.image} alt={service.title} className="w-full h-48 md:h-full object-cover" />
+                  </div>
+                  <div className="md:w-2/3 p-8">
+                    <div className="flex items-center mb-4">
+                      <service.icon className="w-8 h-8 text-primary mr-3" />
+                      <h3 className="text-2xl font-bold text-card-foreground">{service.title}</h3>
+                    </div>
+                    <p className="text-muted-foreground mb-6">{service.description}</p>
+                    <div className="space-y-3">
+                      {service.features.map((feature, idx) => (
+                        <div key={idx} className="flex items-center">
+                          <ChevronRight className="w-5 h-5 text-primary mr-3" />
+                          <span className="text-card-foreground">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-20 bg-muted">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-foreground mb-4">Our Process</h2>
+            <p className="text-xl text-muted-foreground">How we deliver exceptional results</p>
+          </div>
+          <div className="grid md:grid-cols-4 gap-8">
+            {[
+              { step: '01', title: 'Consultation', description: 'Understanding your specific requirements and objectives' },
+              { step: '02', title: 'Strategy', description: 'Developing customized solutions and implementation plans' },
+              { step: '03', title: 'Execution', description: 'Implementing solutions with precision and attention to detail' },
+              { step: '04', title: 'Support', description: 'Ongoing support and optimization for continued success' }
+            ].map((process, index) => (
+              <div key={index} className="text-center">
+                <div className="bg-primary text-primary-foreground w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold">
+                  {process.step}
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-4">{process.title}</h3>
+                <p className="text-muted-foreground">{process.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+
+  const renderIndustries = () => (
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-r from-blue-800 to-sky-700 text-white py-20">
+        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl font-bold mb-6">Industries We Serve</h1>
+          <p className="text-xl max-w-3xl mx-auto">
+            Specialized expertise across diverse industry sectors worldwide
+          </p>
+        </div>
+      </section>
+
+      {/* Industries Grid */}
+      <section className="py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12">
+            {industries.map((industry, index) => (
+              <div key={index} className="bg-card rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
+                <div className="relative h-64">
+                  <img src={industry.image} alt={industry.name} className="w-full h-full object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <div className="flex items-center mb-2">
+                      <industry.icon className="w-6 h-6 mr-2" />
+                      <h3 className="text-2xl font-bold">{industry.name}</h3>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-8">
+                  <p className="text-muted-foreground mb-6">{industry.description}</p>
+                  <h4 className="text-lg font-semibold text-foreground mb-4">Key Products:</h4>
+                  <div className="grid grid-cols-2 gap-3">
+                    {industry.products.map((product, idx) => (
+                      <div key={idx} className="flex items-center">
+                        <ChevronRight className="w-4 h-4 text-primary mr-2" />
+                        <span className="text-card-foreground">{product}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+
+  const renderPartners = () => (
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-r from-blue-800 to-sky-700 text-white py-20">
+        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl font-bold mb-6">Our Partners</h1>
+          <p className="text-xl max-w-3xl mx-auto">
+            Building lasting relationships with trusted partners worldwide
+          </p>
+        </div>
+      </section>
+
+      {/* Partners Grid */}
+      <section className="py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12">
+            {partners.map((partner, index) => (
+              <div key={index} className="bg-card rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
+                <div className="md:flex">
+                  <div className="md:w-1/3">
+                    <img src={partner.image} alt={partner.name} className="w-full h-48 md:h-full object-cover" />
+                  </div>
+                  <div className="md:w-2/3 p-8">
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="text-xl font-bold text-card-foreground">{partner.name}</h3>
+                      <div className="flex">
+                        <p className="font-medium text-muted-foreground">Phone: +20 111 050 7022</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center text-sm text-muted-foreground mb-4">
+                      <MapPin className="w-4 h-4 mr-1" />
+                      <span className="mr-4">{partner.location}</span>
+                      <span className="bg-blue-100 text-primary px-2 py-1 rounded-full text-xs">
+                        {partner.partnership}
+                      </span>
+                    </div>
+                    <p className="text-muted-foreground">{partner.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-20 bg-muted">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-foreground mb-4">Client Testimonials</h2>
+            <p className="text-xl text-muted-foreground">What our partners say about working with us</p>
+          </div>
+          <div className="grid lg:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-card rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground mb-6 italic text-lg">"{testimonial.content}"</p>
+                <div className="flex items-center">
+                  <img src={testimonial.image} alt={testimonial.name} className="w-14 h-14 rounded-full mr-4" />
+                  <div>
+                    <div className="font-semibold text-card-foreground text-lg">{testimonial.name}</div>
+                    <div className="text-sm text-muted-foreground">{testimonial.role}</div>
+                    <div className="text-sm text-primary font-medium">{testimonial.company}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+
+  const renderContact = () => (
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-r from-blue-800 to-sky-700 text-white py-20">
+        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl font-bold mb-6">Contact Us</h1>
+          <p className="text-xl max-w-3xl mx-auto">
+            Ready to start your global trading journey? Get in touch with our experts today
+          </p>
+        </div>
+      </section>
+
+      {/* Contact Form & Info */}
+      <section className="py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16">
+            {/* Contact Form */}
+            <div>
+              <h2 className="text-3xl font-bold text-foreground mb-8">Send us a Message</h2>
+              <form className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">First Name</label>
+                    <input type="text" className="w-full px-4 py-3 border border-input rounded-lg bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-transparent" />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-2">Last Name</label>
+                    <input type="text" className="w-full px-4 py-3 border border-input rounded-lg bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-transparent" />
+                  </div>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-2">Email</label>
+                  <input type="email" className="w-full px-4 py-3 border border-input rounded-lg bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-transparent" />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-2">Company</label>
+                  <input type="text" className="w-full px-4 py-3 border border-input rounded-lg bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-transparent" />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-2">Industry</label>
+                  <select className="w-full px-4 py-3 border border-input rounded-lg bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-transparent">
+                    <option>Select Industry</option>
+                    <option>Electronics & Technology</option>
+                    <option>Textiles & Apparel</option>
+                    <option>Food & Beverages</option>
+                    <option>Industrial Equipment</option>
+                    <option>Healthcare & Pharmaceuticals</option>
+                    <option>Renewable Energy</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-2">Message</label>
+                  <textarea rows={6} className="w-full px-4 py-3 border border-input rounded-lg bg-background text-foreground focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                </div>
+                <button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 px-6 rounded-lg font-semibold transition-colors duration-300">
+                  Send Message
+                </button>
+              </form>
+            </div>
+
+            {/* Contact Information */}
+            <div>
+              <h2 className="text-3xl font-bold text-foreground mb-8">Get in Touch</h2>
+              <div className="space-y-8">
+                <div className="flex items-start">
+                  <div className="bg-blue-100 p-3 rounded-lg mr-4">
+                    <MapPin className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-foreground mb-2">Headquarters</h3>
+                    <p className="text-muted-foreground">
+                      TAG Group Trading Company<br />
+                      Business Bay, Dubai<br />
+                      United Arab Emirates<br />
+                      P.O. Box 12345
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="bg-blue-100 p-3 rounded-lg mr-4">
+                    <Phone className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-foreground mb-2">Phone</h3>
+                    <p className="text-muted-foreground">
+                      Main: +20 111 050 7022<br />
+                      Sales: +20 111 050 7022<br />
+                      Support: +20 111 050 7022
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="bg-blue-100 p-3 rounded-lg mr-4">
+                    <Mail className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-foreground mb-2">Email</h3>
+                    <p className="text-muted-foreground">
+                      General: info@tag-group.org<br />
+                      Sales: sales@tag-group.org<br />
+                      Support: support@tag-group.org
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="bg-blue-100 p-3 rounded-lg mr-4">
+                    <Globe className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-foreground mb-2">Business Hours</h3>
+                    <p className="text-muted-foreground">
+                      Monday - Friday: 8:00 AM - 6:00 PM GST<br />
+                      Saturday: 9:00 AM - 2:00 PM GST<br />
+                      Sunday: Closed<br />
+                      24/7 Emergency Support Available
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -379,10 +751,10 @@ const Index = () => {
     switch (currentPage) {
       case 'home': return renderHome();
       case 'about': return renderAbout();
-      case 'services': return <div className="min-h-screen py-20 text-center"><h1 className="text-4xl">Services Page Coming Soon</h1></div>;
-      case 'industries': return <div className="min-h-screen py-20 text-center"><h1 className="text-4xl">Industries Page Coming Soon</h1></div>;
-      case 'partners': return <div className="min-h-screen py-20 text-center"><h1 className="text-4xl">Partners Page Coming Soon</h1></div>;
-      case 'contact': return <div className="min-h-screen py-20 text-center"><h1 className="text-4xl">Contact Page Coming Soon</h1></div>;
+      case 'services': return renderServices();
+      case 'industries': return renderIndustries();
+      case 'partners': return renderPartners();
+      case 'contact': return renderContact();
       default: return renderHome();
     }
   };
